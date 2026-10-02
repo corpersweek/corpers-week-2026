@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d90429">
+  <meta name="description" content="Create your personalized I WILL BE THERE! card for Winners Youth Corpers Fellowship — Corpers Week 2026.">
+  <title>Corpers Week 2026 — I Will Be There!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar"><span>WINNERS YOUTH CORPERS FELLOWSHIP</span><span>CORPERS WEEK 2026</span></div>
+  <main>
+    <section class="hero">
+      <div class="logos">
+        <img src="assets/fellowship-logo.jpeg" alt="Winners Youth Corpers Fellowship">
+        <img src="assets/nysc-logo.jpeg" alt="NYSC">
+        <img src="assets/youth-alive-logo.jpeg" alt="Youth Alive">
+      </div>
+      <div class="brand">WINNERS YOUTH CORPERS FELLOWSHIP</div>
+      <h1>NEW BEGINNING</h1>
+      <p class="event">CORPERS WEEK 2026 <b>•</b> 22ND–25TH OCTOBER 2026</p>
+      <div class="stripe"></div>
+    </section>
+
+    <section class="builder" id="builder">
+      <div class="copy">
+        <span class="badge">MAKE YOUR PERSONAL CARD</span>
+        <h2>Show everyone:<br><em>I WILL BE THERE!</em></h2>
+        <p>Enter your name, add your photo, and create your own shareable event card.</p>
+        <div class="activity">FELLOWSHIP · WORD · PRAISE · MOVIE NIGHT · OUTREACH · AND MORE</div>
+      </div>
+      <div class="form-card">
+        <label for="name">YOUR FULL NAME</label>
+        <input id="name" maxlength="42" autocomplete="name" placeholder="e.g. Christopher Okafor">
+        <label for="photo">YOUR PHOTO</label>
+        <input id="photo" type="file" accept="image/jpeg,image/png,image/webp,image/*">
+        <div class="filehint">JPG, PNG or WEBP · up to 5 MB</div>
+        <label class="consent"><input id="consent" type="checkbox"> <span>I have permission to use this photo for this event card.</span></label>
+        <button id="create" class="primary" disabled>CREATE MY CARD</button>
+        <div id="message" class="message"></div>
+      </div>
+    </section>
+
+    <section class="result hidden" id="result">
+      <div class="result-head">
+        <div><span class="badge">YOUR CARD IS READY</span><h2 id="welcome">I WILL BE THERE!</h2></div>
+        <span id="shareStatus" class="status"></span>
+      </div>
+      <div class="canvas-wrap"><canvas id="card" width="1080" height="1350"></canvas></div>
+      <div class="actions">
+        <button id="download" class="secondary">DOWNLOAD CARD</button>
+        <button id="share" class="secondary">SHARE CARD + LINK</button>
+        <button id="whatsapp" class="whatsapp">SHARE CARD + LINK ON WHATSAPP</button>
+      </div>
+      <p class="link-note">When you share, your card image, hashtags and clickable link go together. Anyone who opens the link gets a fresh form to make their own card.</p>
+    </section>
+
+    <footer>
+      <div><b>#NewBeginning</b> <b>#CorpersWeek2026</b></div>
+      <p>Invite someone. Let them create their own card.</p>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
